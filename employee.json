@@ -1,0 +1,76 @@
+{
+    "openapi": "3.0.3",
+  
+    "info": {
+      "version": "1.0.0",
+      "title": "nodebucket employees API",
+      "description": "employee API"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3000/api"
+      }
+    ],
+    "tags": [
+      {
+        "name": "Employees",
+        "description": "API for employees"
+      }
+    ],
+    "schemes": ["http"],
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
+    "paths": {
+      "/employees/{empId}:": {
+        "get": {
+          "tags": ["employees"],
+          "summary": "findEmployeeById and will be able to return full name",
+          "description": "findEmployeeById and will be able to return full name based on their empId",
+          "parameters": [
+            {
+              "name": "empId",
+              "in": "path",
+              "description": "Employee ID",
+              "required": true,
+              "type": "number"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Employee document found",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "empId": {
+                        "type": "number",
+                        "example": 1008
+                      },
+                      "firstName": {
+                        "type": "string",
+                        "example": "Clarke"
+                      },
+                      "lastName": {
+                        "type": "string",
+                        "example": "Griffin"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad request"
+            },
+            "404": {
+              "description": "Not found"
+            },
+            "500": {
+              "description": "Server Error"
+            }
+          }
+        }
+      }
+    }
+  }
