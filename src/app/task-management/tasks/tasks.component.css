@@ -1,0 +1,31 @@
+/*
+title: tasks.component.css 
+author: Caitlynne Johnson
+date: 9/02/23
+*/
+
+.btn {
+    background-color: #adb5bd;
+    color: #000;
+}
+
+.container-fluid {
+    color: #000;
+}
+
+.bg-color {
+    background-color: #fff;
+}
+
+.task-column {
+    min-height: 200px;
+}
+
+.task-hover:hover {
+    cursor: pointer;
+}
+
+.btn-add:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}

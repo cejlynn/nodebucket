@@ -1,0 +1,20 @@
+
+/* 
+title: not-found.component.css
+author: Caitlynne Johnson
+date: 9/02/23
+*/
+
+.container {
+    color: #adb5bd;
+}
+
+.btn {
+    background-color: #198754;
+    color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
